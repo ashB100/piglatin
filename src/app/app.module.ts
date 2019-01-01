@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PiglatinComponent } from './piglatin/piglatin.component';
+import { PiglatinInputComponent } from './piglatin-input/piglatin-input.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PiglatinComponent,
+    PiglatinInputComponent
   ],
   imports: [
     BrowserModule,

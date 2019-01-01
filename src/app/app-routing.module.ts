@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PiglatinComponent } from './piglatin/piglatin.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: PiglatinComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
