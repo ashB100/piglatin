@@ -1,6 +1,6 @@
 <div>
-  <app-piglatin-input></app-piglatin-input>
-  <button>Translate</button>
+  <input type="text" #input (keyup.enter)="onTranslate(input.value)">
+  <button (click)="onTranslate(input.value)">Translate</button>
 </div>
 
-<p>Translated Result</p>
+<p>{{piglatin}}</p>
