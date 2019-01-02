@@ -1,27 +1,11 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#" routerLink="/about" routerLinkActive="active">About</a>
-      <a mat-list-item href="#" routerLink="/piglatin-translator" routerLinkActive="active">Translate</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="accent">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Pig Latin</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+ <mat-toolbar color="accent">
+   <span>Pig Latin</span>
+   <span class="fill-remaining-space"></span>
+   <a mat-list-item href="#" routerLink="/about" routerLinkActive="active">About</a>
+   <span>&nbsp;</span>
+   <a mat-list-item href="#" routerLink="/piglatin-translator" routerLinkActive="active">Translator</a>
+ </mat-toolbar>
+
+ <div class="routed-content">
+   <router-outlet></router-outlet>
+ </div>
