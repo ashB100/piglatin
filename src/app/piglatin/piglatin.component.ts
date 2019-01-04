@@ -9,7 +9,7 @@ export class PiglatinComponent {
   piglatin = '';
 
   onTranslate(value: string) {
-    if (/^[aeiou]/.test(value)) {
+    if (/^[aeiou]/i.test(value)) {
       this.piglatin = value + 'way';
     } else {
       this.piglatin = value

@@ -1,10 +1,17 @@
+<div class="wrapper">
+  <div>
+    <input type="text" #input (keyup.enter)="onTranslate(input.value)">
+    <mat-icon>clear</mat-icon>
+  </div>
 
+  <div>
+    <mat-icon (click)="onTranslate(input.value)">arrow-forward</mat-icon>
+  </div>
 
-<div>
-  <input type="text" #input (keyup.enter)="onTranslate(input.value)">
-  <button (click)="onTranslate(input.value)">Translate</button>
+  <div>
+    <textarea disabled class="piglatin">{{piglatin}}</textarea>
+  </div>
+
 </div>
 
-<p>{{piglatin}}</p>
 
-<!--<img src="../../assets/piggy.png">-->
