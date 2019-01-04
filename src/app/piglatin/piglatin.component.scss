@@ -30,17 +30,21 @@ textarea {
   }
 }
 
+.resize {
+  max-width: 50%;
+  max-height: 50%
+}
 // TODO:
 /*
-1. Pick fonts
-2. layout menubar and main content. Lookup flex box!
-Flex the image to be at bottom of content. Add a footer
-3. About pg done
-4. Translator pg
-5. Learn about how to work with images
-6. background color, font color, letter spacing, font size,
-7. Menu active, hover
-8. How to style components
-9. Learn about height and width for divs, components
-10. Measure performance, load time, paint etc.
+* Pick fonts
+* Toolbar. Menu active, hover
+* About pg done
+* Add a footer
+* Lookup flex box!
+* Flex the image to be at bottom of content.
+* Translator pg
+* Learn about how to work with images
+* background color, font color, letter spacing, font size,
+* How to style angular components done
+* Measure performance, load time, paint etc.
 */
