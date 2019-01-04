@@ -1,30 +1,36 @@
 <div class="wrapper">
-  <div>
-    <p>English</p>
-    <div id="english" class="flex-row flex-item">
-      <div>
-        <textarea type="text" #input (keyup.enter)="onTranslate(input.value)"></textarea>
-      </div>
+  <div class="flex-row translation-container">
+    <div class="translation-item-container">
+      <p>English</p>
+      <div id="translateFrom" class="flex-row translation-item">
+        <div class="textarea-container">
+          <textarea type="text" #input (keyup.enter)="onTranslate(input.value)"></textarea>
+        </div>
 
-      <div>
-        <mat-icon (click)="onTranslate(input.value)">arrow_forward</mat-icon>
-        <mat-icon (click)="input.value=null;piglatin=null">clear</mat-icon>
+        <div class="icons-container">
+          <mat-icon (click)="onTranslate(input.value)">arrow_forward</mat-icon>
+          <mat-icon (click)="input.value=null;piglatin=null">clear</mat-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="gutter"></div>
+
+    <div class="translation-item-container">
+      <p>Pig Latin</p>
+
+      <div id="translation" class="translation-item">
+        <span disabled class="piglatin">{{piglatin}}</span>
       </div>
     </div>
   </div>
 
-<div>
-  <p>Pig Latin</p>
+  <!--<div class="row-gutter"></div>-->
 
-  <div id="piglatin" class="flex-item">
-    <span disabled class="piglatin">{{piglatin}}</span>
+  <div class="image-wrapper">
+    <img src="../../assets/piggy.png" class="resize" alt="Pig image">
   </div>
 </div>
 
 
-</div>
-
-<div class="image-wrapper">
-  <img src="../../assets/piggy.png" class="resize" alt="Pig image">
-</div>
 
