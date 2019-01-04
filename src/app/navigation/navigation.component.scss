@@ -20,7 +20,7 @@ a {
 
 mat-toolbar {
   .mat-list-item {
-    padding: 0.8em 1em;
+    padding: 0 0.8em;
 
     &:hover {
       background: saddlebrown;
@@ -28,10 +28,10 @@ mat-toolbar {
   }
 }
 
-.mat-list-item.active {
-  text-decoration: underline;
-}
-
-.mat-list-item:hover {
-  text-decoration: none;
-}
+//.mat-list-item.active {
+//  color: saddlebrown;
+//}
+//
+//.mat-list-item:hover {
+//  color: inherit;
+//}
