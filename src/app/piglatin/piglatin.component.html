@@ -1,16 +1,26 @@
 <div class="wrapper">
   <div>
-    <input type="text" #input (keyup.enter)="onTranslate(input.value)">
-    <mat-icon>clear</mat-icon>
+    <p>English</p>
+    <div id="english" class="flex-row flex-item">
+      <div>
+        <textarea type="text" #input (keyup.enter)="onTranslate(input.value)"></textarea>
+      </div>
+
+      <div>
+        <mat-icon (click)="onTranslate(input.value)">arrow_forward</mat-icon>
+        <mat-icon (click)="input.value=null;piglatin=null">clear</mat-icon>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <mat-icon (click)="onTranslate(input.value)">arrow-forward</mat-icon>
-  </div>
+<div>
+  <p>Pig Latin</p>
 
-  <div>
-    <textarea disabled class="piglatin">{{piglatin}}</textarea>
+  <div id="piglatin" class="flex-item">
+    <span disabled class="piglatin">{{piglatin}}</span>
   </div>
+</div>
+
 
 </div>
 

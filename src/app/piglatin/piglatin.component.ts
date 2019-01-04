@@ -13,7 +13,7 @@ export class PiglatinComponent {
       this.piglatin = value + 'way';
     } else {
       this.piglatin = value
-        .replace(/([bcdfghjklmnpqrstvwxyz]{1,})([aeiou*])(.*)/i, '$2$3$1ay');
+        .replace(/([bcdfghjklmnpqrstvwxyz]{1,})([aeiou]*)(.*)/i, '$2$3$1ay');
     }
   }
 }
