@@ -1,28 +1,35 @@
 <div class="wrapper">
   <div class="flex-row translation-container">
     <div class="translation-item-container">
-      <p>English</p>
+      <p class="text-align-center">{{translateFrom}}</p>
       <div id="translateFrom" class="flex-row translation-item">
         <div class="textarea-container">
-          <textarea type="text" #input></textarea>
+          <textarea autofocus #input></textarea>
         </div>
 
         <div class="icons-container">
           <!--<mat-icon (click)="translate(input.value)">arrow_forward</mat-icon>-->
-          <button mat-icon-button [disabled]="!piglatin" color="accent">
-            <mat-icon (click)="input.value=null;piglatin=null">clear</mat-icon>
+          <button mat-icon-button [disabled]="!translatedValue" color="accent">
+            <mat-icon (click)="input.value=null;translatedValue=null">cancel</mat-icon>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="gutter"></div>
+    <div class="gutter">
+
+        <button mat-icon-button>
+          <mat-icon (click)="switchLanguage()">swap_horiz</mat-icon>
+        </button>
+
+
+    </div>
 
     <div class="translation-item-container">
-      <p>Pig Latin</p>
+      <p class="text-align-center">{{translateTo}}</p>
 
       <div id="translation" class="translation-item">
-        <span disabled class="piglatin">{{piglatin}}</span>
+        <span disabled>{{translatedValue}}</span>
       </div>
     </div>
   </div>
