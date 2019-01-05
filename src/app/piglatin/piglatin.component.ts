@@ -1,7 +1,7 @@
 import { AfterContentInit, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Observable, interval } from 'rxjs/index';
 import { fromEvent } from 'rxjs';
-import { take } from 'rxjs/internal/operators';
+import { debounceTime } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-piglatin',
@@ -9,11 +9,11 @@ import { take } from 'rxjs/internal/operators';
   styleUrls: ['./piglatin.component.scss']
 })
 export class PiglatinComponent implements OnInit {
-  @ViewChild('input') inputEl: ElementRef;
-
   piglatin = '';
 
-  onTranslate(value: string) {
+  @ViewChild('input') inputEl: ElementRef;
+
+  translate(value: string) {
     if (/^[aeiou]/i.test(value)) {
       this.piglatin = value + 'way';
     } else {
@@ -23,8 +23,8 @@ export class PiglatinComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.inputEl);
-    const inputString$ = fromEvent(this.inputEl.nativeElement, 'keyup');
-    inputString$.subscribe(str => this.onTranslate(str.target.value));
+    const inputString$ = fromEvent(this.inputEl.nativeElement, 'keyup')
+      .pipe(debounceTime(200));
+    inputString$.subscribe(str => this.translate(str.target.value));
   }
 }
