@@ -4,12 +4,14 @@
       <p>English</p>
       <div id="translateFrom" class="flex-row translation-item">
         <div class="textarea-container">
-          <textarea type="text" #input (keyup.enter)="onTranslate(input.value)"></textarea>
+          <textarea type="text" #input></textarea>
         </div>
 
         <div class="icons-container">
-          <mat-icon (click)="onTranslate(input.value)">arrow_forward</mat-icon>
-          <mat-icon (click)="input.value=null;piglatin=null">clear</mat-icon>
+          <!--<mat-icon (click)="onTranslate(input.value)">arrow_forward</mat-icon>-->
+          <button mat-icon-button [disabled]="!piglatin">
+            <mat-icon (click)="input.value=null;piglatin=null">clear</mat-icon>
+          </button>
         </div>
       </div>
     </div>
@@ -24,8 +26,6 @@
       </div>
     </div>
   </div>
-
-  <!--<div class="row-gutter"></div>-->
 
   <div class="image-wrapper">
     <img src="../../assets/piggy.png" class="resize" alt="Pig image">

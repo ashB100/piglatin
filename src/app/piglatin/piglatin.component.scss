@@ -54,7 +54,7 @@ textarea {
   height: 100%;
   width: 95%;
   border: none;
-  padding: 0;
+  padding: 0.5em 0;
   resize: none;
   font-size: 1em;
 
@@ -76,15 +76,19 @@ textarea {
 }
 // TODO:
 /*
-* Pick fonts
+* Pick fonts done
 * Toolbar. Menu active, hover done
 * About pg done
 * Add a footer
-* Lookup flex box!
-* Flex the image to be at bottom of content.
-* Translator pg
+* Lookup flex box! done
+* Flex the image to be at bottom of content. done
+* Style Translator pg done
 * Learn about how to work with images
-* background color, font color, letter spacing, font size,
+* Background color, font color, letter spacing, font size done
 * How to style angular components done
 * Measure performance, load time, paint etc.
+
+* Use rxjs stream to watch input, translate with some debounce
+* Implement switching languages
+
 */
