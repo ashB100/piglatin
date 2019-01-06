@@ -79,7 +79,6 @@ textarea {
 * Pick fonts done
 * Toolbar. Menu active, hover done
 * About pg done
-* Add a footer
 * Lookup flex box! done
 * Flex the image to be at bottom of content. done
 * Style Translator pg done
@@ -87,8 +86,19 @@ textarea {
 * Background color, font color, letter spacing, font size done
 * How to style angular components done
 * Measure performance, load time, paint etc.
+* Use rxjs stream to watch input, translate with some debounce done
 
-* Use rxjs stream to watch input, translate with some debounce
-* Implement switching languages
-
+* Implement switching languages - partly done. States of variables
+inputString, translatedValue are not managed properly.
+Use streams for those too????????
+InputString$ is only triggered by input.keyup. When switching
+languages, I switch inputString and translatedValue, which doesn't
+trigger translation. Ah, but its ok because it shouldn't translate
+to piglatin again, so the piglatin to english is ok
+Have to implement piglatin to english!!!!
+* Should I use reactive form?
+* Add a footer
+* Make responsive. For small screen put the input and display as column. use
+different icon direction for switching languages.
+*
 */
