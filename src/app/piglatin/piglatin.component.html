@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="flex-row translation-container">
     <div class="translation-item-container">
-      <p class="text-align-center">{{translateFrom}}</p>
+      <p>{{translateFrom}}</p>
       <div id="translateFrom" class="flex-row translation-item">
         <div class="textarea-container">
           <textarea autofocus #input></textarea>
@@ -9,7 +9,7 @@
 
         <div class="icons-container">
           <!--<mat-icon (click)="translate(input.value)">arrow_forward</mat-icon>-->
-          <button mat-icon-button [disabled]="!translatedValue" color="accent">
+          <button mat-icon-button [disabled]="!translatedValue" color="primary">
             <mat-icon (click)="input.value=null;translatedValue=null">cancel</mat-icon>
           </button>
         </div>
@@ -18,18 +18,18 @@
 
     <div class="gutter">
 
-        <button mat-icon-button>
-          <mat-icon (click)="switchLanguage()">swap_horiz</mat-icon>
-        </button>
+        <!--<button mat-icon-button>-->
+          <!--<mat-icon (click)="switchLanguage()">swap_horiz</mat-icon>-->
+        <!--</button>-->
 
 
     </div>
 
     <div class="translation-item-container">
-      <p class="text-align-center">{{translateTo}}</p>
+      <p>{{translateTo}}</p>
 
       <div id="translation" class="translation-item">
-        <span disabled>{{translatedValue}}</span>
+        <textarea disabled>{{translatedValue}}</textarea>
       </div>
     </div>
   </div>
