@@ -23,7 +23,11 @@ export class PiglatinComponent implements OnInit {
         debounceTime(200)
       );
 
-    inputString$.subscribe(event => this.translate(event.target.value));
+    inputString$.subscribe(event => {
+      if (event !== {} ) {
+        this.translate(event.target.value);
+      }
+    });
   }
 
   translate(value: string) {
