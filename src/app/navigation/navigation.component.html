@@ -1,12 +1,19 @@
- <mat-toolbar color="accent">
-   <span class="margin-left-1">Pig Latin</span>
-   <span class="fill-remaining-space"></span>
-   <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
-   <a mat-list-item routerLink="/piglatin-translator" routerLinkActive="active">Translator</a>
- </mat-toolbar>
 
- <div [@routeAnimation]="getAnimationData(routerOutlet)">
-   <router-outlet #routerOutlet="outlet"></router-outlet>
- </div>
+   <mat-toolbar color="accent">
+     <span class="margin-left-1">Pig Latin</span>
+     <div class="logo-continer">
+       <img class="logo" src="../../assets/piggy_wiggy.png">
+     </div>
+     <span class="fill-remaining-space"></span>
+     <a mat-list-item routerLink="/about" routerLinkActive="active">About</a>
+     <a mat-list-item routerLink="/piglatin-translator" routerLinkActive="active">Translator</a>
+   </mat-toolbar>
+
+
+   <div class="router-container" [@routeAnimation]="getAnimationData(routerOutlet)">
+     <router-outlet #routerOutlet="outlet"></router-outlet>
+   </div>
+
+
 
 

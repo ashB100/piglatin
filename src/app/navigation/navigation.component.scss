@@ -1,13 +1,7 @@
-:host {
-  display: block;
-  height: 100%;
+.navigation-container {
+  display: flex;
+  flex-direction: column;
 }
-
-//.routed-content {
-//  height: 100%;
-//  background-image: url("../../assets/piggy.png");
-//  background-repeat: no-repeat;
-//}
 
 .fill-remaining-space {
   flex: 1 1 auto;
@@ -28,10 +22,15 @@ mat-toolbar {
   }
 }
 
-//.mat-list-item.active {
-//  color: saddlebrown;
-//}
-//
-//.mat-list-item:hover {
-//  color: inherit;
-//}
+.router-container {
+  flex-grow: 1;
+}
+
+.logo-continer {
+  margin-left: 0.5em;
+  height: 2em;
+}
+
+.logo {
+  max-height: 100%;
+}

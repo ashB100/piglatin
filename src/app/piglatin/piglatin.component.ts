@@ -1,9 +1,9 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { combineLatest, from, of, Subject } from 'rxjs/index';
 import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { Language } from '../language.enum';
-import { map } from 'rxjs/internal/operators';
+import { filter, map } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-piglatin',
@@ -19,8 +19,11 @@ export class PiglatinComponent implements OnInit {
 
   ngOnInit() {
     const inputString$ = fromEvent(this.inputEl.nativeElement, 'keyup')
-      .pipe(debounceTime(200));
-    inputString$.subscribe(str => this.translate(str.target.value));
+      .pipe(
+        debounceTime(200)
+      );
+
+    inputString$.subscribe(event => this.translate(event.target.value));
   }
 
   translate(value: string) {
