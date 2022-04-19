@@ -3,8 +3,10 @@
     <div class="translation-item-container">
       <p>{{translateFrom}}</p>
       <div id="translateFrom" class="flex-row translation-item">
+
         <div class="textarea-container">
-          <textarea autofocus #input></textarea>
+          <input [formControl]="word">
+          <!--<textarea autofocus #input></textarea>-->
         </div>
 
         <div class="icons-container">
